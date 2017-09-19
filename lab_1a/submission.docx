@@ -1,0 +1,27 @@
+HW1a                           Network Security
+                       Zewei Li
+
+(1). Request Date Protocol:
+1. The client requests the current date to the server.
+***client sends Request(id, what’s the current of date) to server.
+
+2. When the server get request info, it sends response with content of the current time of system to client.
+***server sends back Response(id, Date) to client.
+
+3. The client gets the response from server and send response about ‘received and finished message’ to server.
+*** client sends response(id, confirmed and finished message)
+
+4. When the server received message from client at step 3, the server starts to listen other request.
+Note: no message sends back to the client.
+
+(2). Test Registration info on server
+Note: client whether it has already registered in the server
+
+1. The client sends a request to the server for testing whether it has already existed in the registration info table of database in the server.
+***client sends RequestTestIdentify(id, username) to server.
+
+2. The server responds by sending a message that includes the message of whether pass or fail.
+***server sends Answer(id, pass or fail result) to client.
+
+3.When the client get the Answer message from server, it sends a message to tell the server that it has known.
+***client sends End(id, got result) to server.
